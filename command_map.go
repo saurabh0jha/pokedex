@@ -16,7 +16,7 @@ type LocationArea struct {
 	Results  []Location `json:"results"`
 }
 
-func commandMapf(cfg *config) error {
+func commandMapf(cfg *config, param string) error {
 	resp, err := cfg.pokeapiClient.ListLocations(cfg.nextLocationsURL)
 	if err != nil {
 		fmt.Printf("%v", err)

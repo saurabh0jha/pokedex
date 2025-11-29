@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func commandMapb(config *config) error {
+func commandMapb(config *config, param string) error {
 	if config.prevLocationsURL == nil {
 		return fmt.Errorf("you're on the first page")
 	}
